@@ -18,4 +18,4 @@ I use lots of tools by designing this project
 - [LinkedIn](https://www.linkedin.com/in/furkan-cabbar-630868297)
 - [Instagram](https://www.instagram.com/furkannxdd/)
 
-'''print("Have a great day developers <3");'''
+'''dart print("Have a great day developers <3");'''
