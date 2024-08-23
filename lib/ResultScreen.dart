@@ -39,7 +39,7 @@ class _ResultScreenState extends State<ResultScreen> {
               height: 40,
               child: ElevatedButton(
                 child: Text(
-                  "TRY AGAIN",
+                  widget.result ? "YOU WON! WANNA PLAY AGAIN?" : "TRY AGAIN",
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () {
