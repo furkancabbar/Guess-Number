@@ -1,16 +1,17 @@
-# sayi_tahmin_uygulamasi
+# guess_nummber_project
 
-A new Flutter project.
+It is my first flutter project about the guess number game.
 
-## Getting Started
+## Tools
 
-This project is a starting point for a Flutter application.
+I use lots of tools by designin this project
 
-A few resources to get you started if this is your first Flutter project:
+- Icon
+- Images -> assets from pubspec.yaml
+- Buttons
+- And kind of things
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### My Social
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(LinkedIn)[www.linkedin.com/in/furkan-cabbar-630868297]
+(Instagram)[https://www.instagram.com/furkannxdd/]
