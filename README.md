@@ -13,5 +13,5 @@ I use lots of tools by designin this project
 
 ### My Social
 
-(LinkedIn)[www.linkedin.com/in/furkan-cabbar-630868297]
+(LinkedIn)[https://www.linkedin.com/in/furkan-cabbar-630868297]
 (Instagram)[https://www.instagram.com/furkannxdd/]
