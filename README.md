@@ -1,4 +1,4 @@
-# guess_nummber_project
+# Guess Number Game
 
 It is my first flutter project about the guess number game.
 
@@ -13,5 +13,7 @@ I use lots of tools by designin this project
 
 ### My Social
 
-(LinkedIn)[https://www.linkedin.com/in/furkan-cabbar-630868297]
-(Instagram)[https://www.instagram.com/furkannxdd/]
+---
+
+- [https://www.linkedin.com/in/furkan-cabbar-630868297](LinkedIn)
+- [https://www.linkedin.com/in/furkan-cabbar-630868297](Instagram)
