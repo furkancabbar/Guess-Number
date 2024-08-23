@@ -3,52 +3,52 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:sayi_tahmin_uygulamasi/SonucEkrani.dart';
+import 'package:sayi_tahmin_uygulamasi/ResultScreen.dart';
 
-class TahminEkrani extends StatefulWidget {
+class GuessScreen extends StatefulWidget {
   @override
-  _TahminEkraniState createState() => _TahminEkraniState();
+  _GuessScreenState createState() => _GuessScreenState();
 }
 
-class _TahminEkraniState extends State<TahminEkrani> {
-  var tfTahmin = TextEditingController();
-  int rastgeleSayi = 0;
-  int kalanHak = 5;
-  String yonlendirme = "";
+class _GuessScreenState extends State<GuessScreen> {
+  var tfGuess = TextEditingController();
+  int randomNumber = 0;
+  int remaining = 5;
+  String orientation = "";
 
   @override
   void initState() {
     super.initState();
-    rastgeleSayi = Random().nextInt(101); //0  - 100
-    print("Rastgele Sayı : $rastgeleSayi");
+    randomNumber = Random().nextInt(101); //0  - 100
+    print("Random Number : $randomNumber");
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tahmin Ekranı"),
+        title: Text("Guess Screen"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              "Kalan Hak : $kalanHak",
+              "Remaining : $remaining",
               style: TextStyle(color: Colors.pink, fontSize: 30),
             ),
             Text(
-              "Yardım : $yonlendirme",
+              "Clue : $orientation",
               style: TextStyle(color: Colors.black54, fontSize: 24),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                controller: tfTahmin,
+                controller: tfGuess,
                 keyboardType: TextInputType.number,
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
-                  labelText: "Tahmin",
+                  labelText: "Guess",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   ),
@@ -60,45 +60,45 @@ class _TahminEkraniState extends State<TahminEkrani> {
               height: 50,
               child: ElevatedButton(
                 child: Text(
-                  "TAHMİN ET",
+                  "GUESS",
                   style: TextStyle(color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                 onPressed: () {
                   setState(() {
-                    kalanHak = kalanHak - 1;
+                    remaining = remaining - 1;
                   });
 
-                  int tahmin = int.parse(tfTahmin.text);
+                  int tahmin = int.parse(tfGuess.text);
 
-                  if (tahmin == rastgeleSayi) {
+                  if (tahmin == randomNumber) {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SonucEkrani(sonuc: true)));
+                            builder: (context) => ResultScreen(result: true)));
                     return;
                   }
 
-                  if (tahmin > rastgeleSayi) {
+                  if (tahmin > randomNumber) {
                     setState(() {
-                      yonlendirme = "Tahmini Azalt";
+                      orientation = "Decrement the guess";
                     });
                   }
 
-                  if (tahmin < rastgeleSayi) {
+                  if (tahmin < randomNumber) {
                     setState(() {
-                      yonlendirme = "Tahmini Arttır";
+                      orientation = "Increment the guess";
                     });
                   }
 
-                  if (kalanHak == 0) {
+                  if (remaining == 0) {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SonucEkrani(sonuc: false)));
+                            builder: (context) => ResultScreen(result: false)));
                   }
 
-                  tfTahmin.text = "";
+                  tfGuess.text = "";
                 },
               ),
             ),
